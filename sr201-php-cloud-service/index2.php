@@ -107,6 +107,10 @@ file_put_contents($logfile, $content, FILE_APPEND | LOCK_EX);
 		var url="http:enter your http jpg camera feed here";            // enter your jpeg camera feed here
 		function jsUpdate() {document.image.src=url+"&"+(i++);}
 		</script>
-
+		<noscript>
+                        You don't have javascript enabled.  Good luck with that.
+                        <img class="center" src="http://static image" alt="javascript not enabled"/>
+                </noscript>
+		
 	</body>
 </html>
