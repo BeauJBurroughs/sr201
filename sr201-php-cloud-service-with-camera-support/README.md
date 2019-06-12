@@ -80,6 +80,7 @@ To configure your device to use this sample service, all you need to do is to se
 To modify Cameras embded in the webpage edit cams.html with your ip cameras ip addresses.
 Cameras and control buttons are split into 2 separate iframes to prevent camera refresh with every button click. 
 Some adjusting of the Css may be required to fit to screen the way you desire depending on devices being used. The viewport meta tag has been used to comply with html5 standards updating the way the app sizes to mobile devices.
+ip-camera-proxy from **zyphlar** implemented to reduce strain on cheap ip cameras and individual devices requesting snapshots images from cameras and images not always loading/rendering in iphones.
 
 
 ## Disclaimer
@@ -88,6 +89,7 @@ Both the sample php code and the hosted service is for demonstration purposes on
 The service logs the IP address of both the device and the client requests, but does not store the password, only the hash. Please check the source code for more details.
 
 Thanks and credit goes to **anakhaema** for the initial post.
+Thanks and credit goes to **zyphlar** for the ip-camera-proxy 
 
 
 
