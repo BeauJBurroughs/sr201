@@ -73,44 +73,44 @@ file_put_contents($logfile, $content, FILE_APPEND | LOCK_EX);
 
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta name="Description" content="Buttons and Cameras">
 		<title>SR201 CONTROL</TITLE>
 		<link rel="stylesheet" type="text/css" href="form2.css">
-	</head>
-		<h1 class="center">SR201 CONTROL</h1>
-	<body onload="toggleColor() , jsUpdate()">
-		<div class="form-style-5">
-		<form action="index2.php" method="post">
-	        	<input type="hidden" name="serial" value="<?php echo $serial; ?>">
-        		<input type="hidden" name="password" value="<?php echo $password; ?>">
-
-			<input class="button" type="submit" name="submit" value="Open" id="btn_O">
-			<input class="button" type="submit" name="submit" value="Close" id="btn_C">
-		</form>
-
-                <label class="center" for="Camera1">Entrance - Camera1</label>
-                <img class="center" id="Camera1" src="http//:enter your http mjpeg camera feed here" width="320" height="240"> // enter your mjpeg camera feed here
-                <label class="center" for="Camera2">Exit - Camera2</label>
-                <img class="center" name="image" onload="jsUpdate()" width="320" height="240" alt=Exit-Cam>
-
 		<script>
-		function toggleColor(){
-		 if (<?php echo $current2; ?>  == "10000000"){
-		 document.getElementById("btn_O").classList.add('toggle');
-		 }else {
-		 document.getElementById("btn_O").classList.remove('toggle');
-		 }
-		}
-		var i=0;
-		var url="http:enter your http jpg camera feed here";            // enter your jpeg camera feed here
-		function jsUpdate() {document.image.src=url+"&"+(i++);}
+			function toggleColor(){
+				if (<?php echo $current2; ?>  == "10000000"){
+					document.getElementById("btn_O").classList.add('toggle');
+				}else {
+					document.getElementById("btn_O").classList.remove('toggle');
+				}
+			}
+			var i=0;
+			var url="http:enter your http jpg camera feed here";            // enter your jpeg camera feed here
+			function jsUpdate() {document.image.src=url+"&"+(i++);}
 		</script>
 		<noscript>
                         You don't have javascript enabled.  Good luck with that.
                         <img class="center" src="http://static image" alt="javascript not enabled"/>
-                </noscript>
+		</noscript>		
+	</head>
+		<h1 class="center">SR201 CONTROL</h1>
+	<body onload="toggleColor() , jsUpdate()">
+		<div class="form-style-5">
+			<form action="index2.php" method="post">
+				<input type="hidden" name="serial" value="<?php echo $serial; ?>">
+        			<input type="hidden" name="password" value="<?php echo $password; ?>">
+
+				<input class="button" type="submit" name="submit" value="Open" id="btn_O">
+				<input class="button" type="submit" name="submit" value="Close" id="btn_C">
+			</form>
+			<label class="center" for="Camera1">Entrance - Camera1</label>
+                	<img class="center" id="Camera1" src="http//:enter your http mjpeg camera feed here" width="320" height="240"> // enter your mjpeg camera feed here
+                	<label class="center" for="Camera2">Exit - Camera2</label>
+			<img class="center" name="image" onload="jsUpdate()" width="320" height="240" alt=Exit-Cam>
+		</div>
 		
 	</body>
 </html>
