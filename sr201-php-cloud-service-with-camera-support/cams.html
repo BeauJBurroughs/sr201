@@ -13,20 +13,36 @@
                 <link rel="preconnect" href="#####http://jpeg camera ip address#####">
                 <title>Cameras</title>
                 <script type="text/javascript">
-                var i=0;
-                var url="http://jpeg camera ip address";
-                function jsUpdate() {document.image.src=url+"&"+(i++);}
+                    var i=0;
+                    var url="http://jpeg camera ip address";
+                    function jsUpdate() {document.image.src=url+"&"+(i++);}
+                    function refresh() {
+                        document.getElementById("livestream1").src = "snapshot.php?camera=1&"+Math.round(Math.random()*1000000);
+                    }
+                    
+                    
+                    function pageLoad() {
+                    setInterval ( "refresh()", 500 );
+                    }                
                 </script>
                 <noscript>
                         You don't have javascript enabled.  Good luck with that.
                 </noscript>
         </head>
-        <body onload="jsUpdate()">
-        <div class="form-style-5">
+        <body onload="jsUpdate(), pageLoad()">
+            <div class="form-style-5">
                 <label class="center" for="Camera1">Entrance - Camera1</label>
                 <img class="center" id="Camera1" src="###############http://mjpeg camera ip address#################" width="320" height="240" alt="Entrance Cam">
+                <!-- must chose to refresh from camera driectly using javascript and jsUpdate() function or 
+                     from ip-camera-proxy using pageLoad() function. if using jpeg snapshots.
+                
                 <label class="center" for="Camera2">Exit - Camera2</label>
                 <img class="center" name="image" onload="jsUpdate()" width="320" height="240" alt=Exit-Cam>
-        </div>
+                
+                <label class="center" for="Camera2">Exit - Camera2</label>
+                <img class="center" id="livestream1" src="snapshot.php?camera=1"  width="320" height="240" alt=Exit-Cam />
+                
+                -->
+            </div>
         </body>
 </html>
