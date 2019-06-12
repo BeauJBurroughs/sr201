@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en">
+        <head>
+                <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1">
+                <meta name="Description" content="cameras">
+                <meta http-equiv=”Pragma” content=”no-cache”>
+                <meta http-equiv=”Expires” content=”-1″>
+                <meta http-equiv=”CACHE-CONTROL” content=”NO-CACHE”>
+                <link rel="stylesheet" type="text/css" href="./sr201/css/form3.css">
+                <link rel="preconnect" href="#####http://mjpeg camera ip address#####">
+                <link rel="preconnect" href="#####http://jpeg camera ip address#####">
+                <title>Cameras</title>
+                <script type="text/javascript">
+                var i=0;
+                var url="http://jpeg camera ip address";
+                function jsUpdate() {document.image.src=url+"&"+(i++);}
+                </script>
+                <noscript>
+                        You don't have javascript enabled.  Good luck with that.
+                </noscript>
+        </head>
+        <body onload="jsUpdate()">
+        <div class="form-style-5">
+                <label class="center" for="Camera1">Entrance - Camera1</label>
+                <img class="center" id="Camera1" src="###############http://mjpeg camera ip address#################" width="320" height="240" alt="Entrance Cam">
+                <label class="center" for="Camera2">Exit - Camera2</label>
+                <img class="center" name="image" onload="jsUpdate()" width="320" height="240" alt=Exit-Cam>
+        </div>
+        </body>
+</html>
