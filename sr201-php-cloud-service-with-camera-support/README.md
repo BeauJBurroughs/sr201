@@ -78,6 +78,8 @@ To configure your device to use this sample service, all you need to do is to se
 
 ## Camera Support
 To modify Cameras embded in the webpage edit cams.html with your ip cameras ip addresses.
+Cameras and control buttons are split into 2 separate iframes to prevent camera refresh with every button click. 
+Some adjusting of the Css may be required to fit to screen the way you desire depending on devices being used. The viewport meta tag has been used to comply with html5 standards updating the way the app sizes to mobile devices.
 
 
 ## Disclaimer
