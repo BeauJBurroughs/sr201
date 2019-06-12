@@ -76,7 +76,7 @@ To configure your device to use this sample service, all you need to do is to se
   
   See <https://github.com/cryxli/sr201/wiki/Config-commands> for more details.
 
-##Camera Support
+## Camera Support
 To modify Cameras embded in the webpage edit cams.html with your ip cameras ip addresses.
 
 
